@@ -1,5 +1,11 @@
 {
-  "dependencies": {
-    "express": "^4.21.2"
-  }
+  "private": true,
+  "workspaces": ["frontend", "backend"],
+  
+    "scripts": {
+      "start:backend": "npm --workspace backend start",
+      "start:frontend": "npm --workspace frontend start",
+      "start": "npm run start:backend && npm run start:frontend"
+    }
+  
 }
